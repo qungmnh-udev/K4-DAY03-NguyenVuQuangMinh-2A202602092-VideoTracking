@@ -23,7 +23,7 @@ Một lớp duy nhất: **`vehicle`** — xe bốn bánh (xe con, van, xe buýt,
 | xe buýt, minibus | **xe máy / mô tô** |
 | xe tải, xe đầu kéo | xe trong ảnh quảng cáo, trong gương, dưới bóng nước |
 
-Bổ sung của nhóm (nếu có): `...`
+Bổ sung của nhóm (nếu có): `Không có`
 
 ## 2. Luật ID — phần quan trọng nhất
 
