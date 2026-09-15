@@ -49,20 +49,20 @@ Bổ sung của nhóm (nếu có): `Không có`
 Ghi **frame cụ thể** và **ID cụ thể**, không ghi chung chung.
 
 ### Ca 1
-- Clip / frame / ID: `000060.jpg`
-- Tình huống: `Xe con đi song song cùng vận tốc và hướng với xe buýt VEHICLE 4 nhưng bị occluded. (Đầu xe)`
+- Clip / frame / ID: `clip_01`,`VEHICLE 5`,`frame 000060.jpg`
+- Tình huống: `Xe con (VEHICLE 5) đi song song cùng vận tốc và hướng với xe buýt VEHICLE 4 nhưng bị occluded. (Đầu xe)`
 - Quyết định: `Không track tại frame này`
 - Lý do: `Thiếu nhiều dữ kiện cho việc quyết định, có thể làm ảnh hưởng tới chất lượng dữ liệu`
 
 ### Ca 2
-- Clip / frame / ID: `000078.jpg`
+- Clip / frame / ID:`clip_01`, `VEHICLE 6`, `000078.jpg`
 - Tình huống: `Xe con đi song song cùng chiều và vận tốc với xe buýt VEHICLE 4 nhưng bị occluded (Đuôi xe)`
 - Quyết định: `Không track tại frame này`
 - Lý do: `Thiếu nhiều dữ kiện, không rõ ràng nên không track.`
 
 ### Ca 3
-- Clip / frame / ID: `000190.jpg`
-- Tình huống: `Xe đang đỗ trên đường, đã track nhưng bị xe khác đi qua che mất`
+- Clip / frame / ID: `clip_01`, `VEHICLE 2`, `000190.jpg`
+- Tình huống: `Xe con (VEHICLE 2) đang đỗ trên đường, đã track nhưng bị xe khác đi qua che mất`
 - Quyết định: `Giữ track, đổi occluded properties thành Occluded`
 - Lý do: `Xe vẫn đủ dữ kiện để được đánh giá và track`
 
@@ -70,5 +70,5 @@ Ghi **frame cụ thể** và **ID cụ thể**, không ghi chung chung.
 
 Luật nào trong file này hoá ra còn thiếu hoặc còn mơ hồ? Viết lại cho rõ:
 
-- `...`
+- `Xe đang đỗ, không di chuyển trong 80 frames thì drop track, tránh làm rác dữ liệu`
 - `...`
