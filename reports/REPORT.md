@@ -2,8 +2,8 @@
 
 Chép file này thành `reports/REPORT.md` rồi điền. Giữ nguyên các tiêu đề.
 
-Họ tên / nhóm: `...`
-Ngày: `...`
+Họ tên / nhóm: `Nguyễn Vũ Quang`
+Ngày: `15/09/2026`
 
 ---
 
@@ -72,7 +72,14 @@ Cấu hình từ `outputs/model_run_config.json`:
 | conf / IoU / imgsz / classes | `...` |
 | device | `...` |
 
-| So sánh | HOTA | DetA | AssA | LocA | IDF1 | MOTA | MOTP | FP | FN | IDSW |
+                    HOTA    DetA    AssA    LocA    IDF1    MOTA    MOTP      FP      FN    IDSW
+------------------------------------------------------------------------------------------------
+ban_vs_gold        0.804   0.770   0.846   0.887   0.945   0.883   0.871      64       3       0
+bytetrack_vs_gold   0.709   0.649   0.776   0.846   0.875   0.749   0.823      88      54       2
+reid_vs_gold       0.763   0.711   0.820   0.872   0.900   0.792   0.860      91      26       2
+reid_vs_ban        0.744   0.680   0.815   0.896   0.857   0.716   0.888      91      87       2
+
+Cổng annotation: ĐẠT {'IDF1': 0.944, 'MOTA': 0.883, 'MOTP': 0.871}
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | bạn vs gold | | | | | | | | | | |
 | ByteTrack control vs gold | | | | | | | | | | |
@@ -83,7 +90,7 @@ Cấu hình từ `outputs/model_run_config.json`:
 
 **1. MOTA của bạn cao hơn hay thấp hơn IDF1? Nếu MOTA cao mà IDF1 thấp thì điều đó nói gì, và vì sao MOTA không phạt nặng lỗi ID?**
 
-`...`
+`MOTA của tôi thấp hơn IDF1. Nếu MOTA cao và IDF1 thấp thì nó sẽ nói lên được rằng mô hình có thể phát hiện được vật thể chính xác, nhưng lại không thể theo dõi và giữ ID cho từng vật thể một cách tối ưu. MOTA không trừ lỗi ID tại vì `
 
 **2. ByteTrack control và BoT-SORT + ReID treatment khác nhau thế nào ở IDF1, AssA và IDSW? Dẫn một frame sequence để giải thích treatment tốt hơn, tệ hơn hoặc không đổi đáng kể. Nhắc rõ đây không cô lập causal effect của ReID vì hai tracker implementation khác.**
 

@@ -29,10 +29,10 @@ Bổ sung của nhóm (nếu có): `Không có`
 
 | Tình huống | Luật của nhóm | Vì sao |
 | --- | --- | --- |
-| Xe bị che một phần rồi hiện lại | giữ nguyên ID nếu bị che **dưới ... frame** (mặc định của lab: 25 frame = 2 giây @ 12.5 fps) | `...` |
-| Xe bị che lâu hơn ngưỡng trên | `...` | `...` |
-| Xe rời khung hình rồi quay lại | mặc định: **track mới** | `...` |
-| Hai xe cắt nhau / chồng lên nhau | `...` | `...` |
+| Xe bị che một phần rồi hiện lại | giữ nguyên ID nếu bị che **dưới 50 frame** (mặc định của lab: 25 frame = 2 giây @ 12.5 fps) | `2s có thể là khoảng thời gian khá thấp để có thể xác định được vật thể gốc đã rời khung hình hay chưa. ` |
+| Xe bị che lâu hơn ngưỡng trên | `Đánh giá dựa trên các frame khác nhau để xác định có nên giữ nguyên ID hay không.` | `...` |
+| Xe rời khung hình rồi quay lại | mặc định: **track mới** | `Có thể giữ track cũ nếu như đủ dữ kiện để xác định ` |
+| Hai xe cắt nhau / chồng lên nhau | `giữ nguyên id 2 xe cắt nhau/chồng nhau, đặt occluded properties` | `Vì trừ khi 2 xe hoàn toàn chồng lên nhau thì vẫn có thể xác định được vật thể` |
 
 ## 3. Luật bbox
 
@@ -40,9 +40,9 @@ Bổ sung của nhóm (nếu có): `Không có`
 | --- | --- |
 | Xe bị cắt bởi rìa ảnh | bbox chạm đúng rìa, không đoán phần ngoài ảnh |
 | Xe bị xe khác che một phần | bbox ôm phần **nhìn thấy được** |
-| Xe vừa xuất hiện, còn rất nhỏ / rất mờ | bắt đầu track từ frame đầu tiên xác định được là xe bốn bánh; ngưỡng nhóm chọn: `...` |
-| Xe đang đỗ, không di chuyển | `...` |
-| Keyframe đặt dày ở đâu | `...` |
+| Xe vừa xuất hiện, còn rất nhỏ / rất mờ | bắt đầu track từ frame đầu tiên xác định được là xe bốn bánh; ngưỡng nhóm chọn: `bắt đầu track từ frame đầu tiên xác định được đặc điểm xe` |
+| Xe đang đỗ, không di chuyển | `giữ track` |
+| Keyframe đặt dày ở đâu | `Keyframe đặt dày ở các frame có nhiều xe bị occlude lên nhau, ra vào khung hình.` |
 
 ## 4. Ít nhất ba ca mơ hồ đã gặp thật
 
