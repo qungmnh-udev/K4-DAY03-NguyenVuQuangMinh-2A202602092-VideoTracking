@@ -7,7 +7,7 @@
 > người trong nhóm gán khác nhau, gần như luôn là vì file này chưa nói rõ — chứ
 > không phải vì ai kém.
 
-Nhóm / tên: `...`
+Nhóm / tên: `Nguyễn Vũ Quang Minh`
 Clip: `clip_01`, `clip_02`
 
 ---
@@ -49,22 +49,22 @@ Bổ sung của nhóm (nếu có): `...`
 Ghi **frame cụ thể** và **ID cụ thể**, không ghi chung chung.
 
 ### Ca 1
-- Clip / frame / ID: `...`
-- Tình huống: `...`
-- Quyết định: `...`
-- Lý do: `...`
+- Clip / frame / ID: `000060.jpg`
+- Tình huống: `Xe con đi song song cùng vận tốc và hướng với xe buýt VEHICLE 4 nhưng bị occluded. (Đầu xe)`
+- Quyết định: `Không track tại frame này`
+- Lý do: `Thiếu nhiều dữ kiện cho việc quyết định, có thể làm ảnh hưởng tới chất lượng dữ liệu`
 
 ### Ca 2
-- Clip / frame / ID: `...`
-- Tình huống: `...`
-- Quyết định: `...`
-- Lý do: `...`
+- Clip / frame / ID: `000078.jpg`
+- Tình huống: `Xe con đi song song cùng chiều và vận tốc với xe buýt VEHICLE 4 nhưng bị occluded (Đuôi xe)`
+- Quyết định: `Không track tại frame này`
+- Lý do: `Thiếu nhiều dữ kiện, không rõ ràng nên không track.`
 
 ### Ca 3
-- Clip / frame / ID: `...`
-- Tình huống: `...`
-- Quyết định: `...`
-- Lý do: `...`
+- Clip / frame / ID: `000190.jpg`
+- Tình huống: `Xe đang đỗ trên đường, đã track nhưng bị xe khác đi qua che mất`
+- Quyết định: `Giữ track, đổi occluded properties thành Occluded`
+- Lý do: `Xe vẫn đủ dữ kiện để được đánh giá và track`
 
 ## 5. Sửa gì sau khi chấm với gold và sau khi kiểm chéo
 
